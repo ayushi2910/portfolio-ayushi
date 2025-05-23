@@ -144,9 +144,7 @@ const About = () => {
           <h2 className="text-5xl font-bold bg-gradient-to-r from-teal-400 to-cyan-300 bg-clip-text text-transparent mb-4 font-mono">
             About Me
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto font-light">
-            Get to know me better through these floating glimpses into my world
-          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-teal-400 to-cyan-400 mx-auto rounded-full mb-6"></div>
         </div>
 
         {/* 3D Floating Grid */}

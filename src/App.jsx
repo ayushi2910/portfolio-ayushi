@@ -7,6 +7,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import Projects from './pages/Projects';
+import Sidebar from './components/Sidebar';
+import Particles from './components/Particles';
+import Certifications from './pages/Certifications';
+import Contact from './pages/Contact';
 
 function App() {
   const [showLanding, setShowLanding] = useState(true);
@@ -26,15 +30,24 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={<Projects />} />
-          {/* Add other routes here */}
+        <Particles />
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <Sidebar />
+          <main>
+            <AnimatePresence mode="wait">
+              <Routes>
+                <Route path="/" element={<Navigate to="/home" replace />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/certifications" element={<Certifications />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </AnimatePresence>    
+          </main>
           
-        </Routes>
+        </div>
       </div>
     </Router>
   );

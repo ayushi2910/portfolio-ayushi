@@ -11,6 +11,8 @@ import {
   Server,
   Palette
 } from 'lucide-react';
+import Particles from '../components/Particles';
+import Sidebar from '../components/Sidebar';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -118,6 +120,11 @@ const Projects = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Particles Background */}
+      <Particles particleCount={40} />
+      
+      {/* Sidebar */}
+      <Sidebar />
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.1),transparent_50%)]"></div>
       
