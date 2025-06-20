@@ -2,4 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+#root {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0rem;
+    text-align: center;
+}

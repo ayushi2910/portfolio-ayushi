@@ -69,7 +69,7 @@ const Particles = ({ particleCount = 50, className = "" }) => {
   };
 
   return (
-    <div className={`fixed inset-0 pointer-events-none z-0 ${className}`}>
+    <div className={` bfixed inset-0 pointer-events-none z-0 ${className}`}>
       {/* Floating Particles */}
       {particles.map((particle) => (
         <motion.div

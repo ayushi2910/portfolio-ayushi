@@ -24,36 +24,38 @@ const Resume = () => {
 
   // Sample data - replace with your actual information
   const profileData = {
-    name: "John Developer",
-    branch: "Computer Science Engineering",
-    email: "john.developer@gmail.com",
+    name: "Ayushi Ranjan",
+    branch: "Computer Science and Design",
+    email: "itsayushiranjan@gmail.com",
     image: "/api/placeholder/150/150", // Circular profile image
     skills: [
-      { name: "JavaScript", icon: Code },
-      { name: "React", icon: Layers },
-      { name: "Node.js", icon: Server },
+      { name: "C++", icon: Code },
+      { name: "HTML/CSS", icon: Code },
       { name: "Python", icon: Code },
+      { name: "JavaScript", icon: Code },
+      { name: "React.js", icon: Code },
+      { name: "Express.js", icon: Code },
+      { name: "Node.js", icon: Smartphone },
       { name: "MongoDB", icon: Database },
-      { name: "Git", icon: GitBranch },
-      { name: "HTML/CSS", icon: Globe },
+      { name: "MySQL", icon: Database },
       { name: "UI/UX", icon: Palette },
-      { name: "React Native", icon: Smartphone }
+      { name: "Github", icon: GitBranch }
     ]
   };
 
   const educationData = [
     {
-      institution: "XYZ University",
-      degree: "B.Tech Computer Science",
-      timeline: "2020 - 2024",
-      score: "8.5 CGPA",
+      institution: "Madhav Institute of Technology and Science",
+      degree: "B.Tech Computer Science & Design",
+      timeline: "2022 - 2026",
+      score: "8.64 CGPA",
       type: "cgpa"
     },
     {
-      institution: "ABC Higher Secondary School",
+      institution: "Shanti Public Higher Secondary School",
       degree: "12th Grade - Science",
-      timeline: "2018 - 2020",
-      score: "92%",
+      timeline: "2021",
+      score: "94.8%",
       type: "percentage"
     }
   ];
@@ -67,7 +69,7 @@ const Resume = () => {
     // In real implementation, this would trigger PDF download
     const link = document.createElement('a');
     link.href = '/path-to-your-resume.pdf'; // Replace with actual resume PDF path
-    link.download = 'John_Developer_Resume.pdf';
+    link.download = 'Ayushi_Ranjan_Resume.pdf';
     link.click();
   };
 

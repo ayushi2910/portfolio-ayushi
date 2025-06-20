@@ -15,7 +15,7 @@ const Landing = ({ onNavigateToHome }) => {
 
   return (
     <motion.div 
-      className="min-h-screen bg-gray-950 relative overflow-hidden flex items-center justify-center cursor-pointer"
+      className=" bg-gray-950 relative overflow-hidden flex items-center justify-center cursor-pointer"
       onClick={handleClick}
       style={{ minHeight: '100vh', width: '100%' }}
       initial={{ opacity: 0 }}
@@ -88,24 +88,13 @@ const Landing = ({ onNavigateToHome }) => {
               ease: "easeInOut"
             }}
           >
-            Ayushi's
+            Ayushi's Portfolio
           </motion.span>
           <br />
-          <span className="text-teal-300">Tech World</span>
+          <span className="text-teal-300"></span>
         </motion.h1>
         
-        {/* Subtitle */}
-        <motion.p
-          className="text-xl md:text-2xl text-gray-300 mb-12 font-medium"
-          style={{ fontFamily: 'Fira Code, monospace' }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          <span className="text-teal-400">&lt;</span>
-          Crafting innovative solutions with code
-          <span className="text-teal-400"> /&gt;</span>
-        </motion.p>
+        
 
       
         {/* Click indicator */}

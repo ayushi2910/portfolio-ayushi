@@ -5,6 +5,10 @@ import { motion } from 'framer-motion';
 import Particles from '../components/Particles';
 import Sidebar from '../components/Sidebar';
 import Typewriter from '../components/Typewriter';
+import Footer from '../components/Footer';
+import Profile from '../assets/ayushi portfolio image.png';
+
+import { Github, Linkedin, Mail, Code2 } from 'lucide-react';
 
 const Home = () => {
   const skills = [
@@ -13,186 +17,155 @@ const Home = () => {
     "DSA Enthusiast",
     "React Developer",
     "UI/UX Designer",
-    "Tech Explorer"
+    "Tech Explorer",
+    "Creative Coder"
+  ];
+
+  const socialLinks = [
+    { 
+      icon: Linkedin, 
+      href: "https://linkedin.com/in/ayushi2910", 
+      label: "LinkedIn",
+      color: "hover:bg-blue-600"
+    },
+    { 
+      icon: Github, 
+      href: "https://github.com/ayushi2910", 
+      label: "GitHub",
+      color: "hover:bg-gray-700"
+    },
+    { 
+      icon: Mail, 
+      href: "mailto:itsayushiranjan@gmail.com", 
+      label: "Email",
+      color: "hover:bg-red-500"
+    },
+    { 
+      icon: Code2, 
+      href: "https://leetcode.com/ayushi2910", 
+      label: "LeetCode",
+      color: "hover:bg-yellow-500"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 relative">
-      {/* Particles Background */}
-      <Particles particleCount={40} />
-      
-      {/* Sidebar */}
-      <Sidebar />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Particles Background */}  
+      <Particles />
+     
       
       {/* Main Content */}
-      <div className="ml-20 lg:ml-80 p-8 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Main Grid Container */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-screen items-center">
+      <div className="min-h-screen p-4 lg:p-8 relative z-10 overflow-y-auto">
+        <div className="max-w-7xl mx-auto">
+          
+          {/* Main Grid Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20">
             
-            {/* Left Grid - Profile Section */}
+            {/* Left Section - Profile & Skills */}
             <motion.div
-              className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 shadow-2xl border border-white/20 hover:scale-105 transition-all duration-500"
+              className="text-center lg:text-left space-y-6 lg:space-y-8"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))'
-              }}
             >
-              {/* Profile Picture */}
-              <motion.div
-                className="flex justify-center mb-8"
-                initial={{ scale: 0, rotate: 180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
-              >
+              {/* Profile Picture with Glow */}
+              <div className="flex justify-center lg:justify-start">
                 <div className="relative">
-                  <motion.div
-                    className="w-48 h-48 rounded-full overflow-hidden border-4 border-purple-400 shadow-lg shadow-purple-400/50"
-                    animate={{
-                      boxShadow: [
-                        '0 0 20px rgba(168, 85, 247, 0.5)',
-                        '0 0 40px rgba(168, 85, 247, 0.8)',
-                        '0 0 20px rgba(168, 85, 247, 0.5)',
-                      ]
-                    }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
+                  <div className="w-80 h-80 sm:w-70 sm:h-70 lg:w-70 lg:h-70 rounded-full overflow-hidden border-4 border-teal-400 relative">
+                    {/* Glowing Animation */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-400 to-cyan-300 animate-pulse opacity-20"></div>
+                    <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-teal-400 to-cyan-300 opacity-20 animate-ping"></div>
+                    <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-teal-400 to-cyan-300 opacity-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    
+                    {/* Profile Image */}
                     <img 
-                      src="/api/placeholder/300/300" 
+                      src={Profile} 
                       alt="Ayushi Ranjan" 
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover relative z-10 hover:scale-105 transition-transform duration-500"
                     />
-                  </motion.div>
-                  
-                  {/* Floating elements around image */}
-                  <motion.div
-                    className="absolute -top-4 -right-4 w-8 h-8 bg-purple-400 rounded-full"
-                    animate={{
-                      y: [-10, 10, -10],
-                      rotate: [0, 360],
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  />
-                  <motion.div
-                    className="absolute -bottom-4 -left-4 w-6 h-6 bg-cyan-400 rotate-45"
-                    animate={{
-                      x: [-5, 5, -5],
-                      rotate: [45, 405],
-                    }}
-                    transition={{ duration: 4, repeat: Infinity }}
-                  />
+                  </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Greeting */}
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <div className="space-y-4 mt-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-mono tracking-tight">
                   Hello, I am{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300 block lg:inline">
                     Ayushi Ranjan
                   </span>
                 </h1>
                 
                 {/* Typewriter Skills */}
-                <div className="text-xl md:text-2xl text-gray-300 mb-8 h-16 flex items-center justify-center">
-                  <span className="mr-2">I am a </span>
+                <div className="text-xl lg:text-2xl text-slate-300 min-h-[3rem] flex items-center justify-center lg:justify-start">
+                  <span className="mr-2 font-mono">I am a </span>
                   <Typewriter 
                     words={skills}
                     speed={100}
                     deleteSpeed={80}
                     delayBetweenWords={2000}
-                    className="text-purple-400 font-semibold"
+                    className="text-teal-400 font-semibold font-mono"
                   />
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
 
-            {/* Right Grid - Bio and CTA Section */}
+            {/* Right Section - Bio & CTAs */}
             <motion.div
-              className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 shadow-2xl border border-white/20 hover:scale-105 transition-all duration-500"
+              className="space-y-6 lg:space-y-8 mt-8 lg:mt-0"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))'
-              }}
             >
               {/* Bio Section */}
-              <motion.div
-                className="mb-8"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1 }}
-              >
-                <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                  <span className="w-8 h-1 bg-gradient-to-r from-purple-400 to-cyan-400 mr-3"></span>
+              <div className="backdrop-blur-lg bg-white/5 rounded-2xl p-6 lg:p-8 border border-teal-400/20 shadow-xl">
+                <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4 font-mono flex items-center">
+                  <span className="w-8 h-1 bg-gradient-to-r from-teal-400 to-cyan-300 mr-3"></span>
                   Who Am I?
                 </h2>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Passionate frontend developer with a love for creating beautiful, 
-                  functional web experiences. I combine technical expertise with creative 
-                  problem-solving to build solutions that make a difference. Always 
-                  eager to learn new technologies and tackle challenging problems.
+                <p className="text-slate-300 text-base lg:text-lg leading-relaxed font-mono">
+                  I'm a Computer Science and Design student with a strong interest in data structures and modern web development. I enjoy building responsive interfaces and constantly expanding my skills to stay ahead in the ever-evolving tech landscape.
                 </p>
-              </motion.div>
+              </div>
 
               {/* CTA Buttons */}
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-              >
-                <Link to="/contact" className="flex-1">
-                  <motion.button
-                    className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-purple-600/50 transition-all duration-300 group"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
+              <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
+                <a href="/resume" className="flex-1">
+                  <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-400 text-slate-900 px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-teal-400/30 transition-all duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95 font-mono text-sm lg:text-base group">
                     <span className="flex items-center justify-center">
-                      Contact Me
-                      <motion.span
-                        className="ml-2"
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                      >
-                        →
-                      </motion.span>
+                      Resume
                     </span>
-                  </motion.button>
-                </Link>
+                  </button>
+                </a>
 
-                <Link to="/projects" className="flex-1">
-                  <motion.button
-                    className="w-full bg-gradient-to-r from-cyan-600 to-blue-800 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-cyan-600/50 transition-all duration-300 group"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
+                <a href="/projects" className="flex-1">
+                  <button className="w-full bg-gradient-to-r from-slate-700 to-slate-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-slate-600/30 transition-all duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95 font-mono text-sm lg:text-base group hover:from-teal-600 hover:to-cyan-500">
                     <span className="flex items-center justify-center">
                       My Work
-                      <motion.span
-                        className="ml-2"
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
-                      >
-                        →
-                      </motion.span>
                     </span>
-                  </motion.button>
-                </Link>
-              </motion.div>
-
-              {/* Decorative Elements */}
-              <div className="absolute top-4 right-4 w-16 h-16 border-2 border-purple-400/30 rounded-full"></div>
-              <div className="absolute bottom-4 left-4 w-12 h-12 border-2 border-cyan-400/30 rotate-45"></div>
+                  </button>
+                </a>
+              </div>
             </motion.div>
+          </div>
+
+          {/* Social Media Section - Centered Below */}
+          <div className="flex justify-center ">
+            <div className="flex space-x-4">
+              {socialLinks.map((link, index) => (
+                <motion.a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-3 rounded-full bg-slate-800 text-white ${link.color} transition-colors duration-300 border border-slate-700`}
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <link.icon className="w-6 h-6" />
+                </motion.a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
