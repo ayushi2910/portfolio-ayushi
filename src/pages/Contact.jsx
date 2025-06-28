@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 import { Send, Users, Mail, MessageSquare } from 'lucide-react';
 
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     user_name: '',
@@ -89,24 +90,6 @@ const ContactForm = () => {
 
   return (
     <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
-      {/* Background floating shapes */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <FloatingElement delay={0} x="10%" y="10%" scale={1.5} rotate={0}>
-          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-sky-300/20 to-cyan-400/20 blur-md" />
-        </FloatingElement>
-        <FloatingElement delay={1} x="80%" y="20%" scale={2} rotate={45}>
-          <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-sky-300/20 to-cyan-400/20 blur-md" />
-        </FloatingElement>
-        <FloatingElement delay={0.5} x="20%" y="70%" scale={1.2} rotate={15}>
-          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-sky-300/20 to-cyan-400/20 blur-md" />
-        </FloatingElement>
-        <FloatingElement delay={1.5} x="70%" y="80%" scale={1.8} rotate={-15}>
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-sky-400/20 to-cyan-300/20 blur-md" />
-        </FloatingElement>
-        <FloatingElement delay={0.8} x="40%" y="30%" scale={1.3} rotate={30}>
-          <div className="w-20 h-20 rounded-lg bg-gradient-to-r from-sky-300/20 to-cyan-400/20 blur-md" />
-        </FloatingElement>
-      </div>
 
       {/* Contact form container */}
       <motion.div 
@@ -117,7 +100,7 @@ const ContactForm = () => {
       >
         <div className="text-center mb-8">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-cyan-300"
+            className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-400"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
@@ -143,7 +126,7 @@ const ContactForm = () => {
         >
           {/* Name */}
           <motion.div variants={itemVariants} className="relative">
-            <div className="absolute left-3 top-3 text-sky-300">
+            <div className="absolute left-3 top-3 text-teal-300">
               <Users size={20} />
             </div>
             <input
@@ -152,14 +135,14 @@ const ContactForm = () => {
               value={formData.user_name}
               onChange={handleChange}
               required
-              className="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-300/50 focus:border-sky-300/50 outline-none backdrop-blur-sm text-slate-100"
+              className="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-teal-300/20 rounded-lg focus:ring-2 focus:ring-teal-300/50 focus:border-teal-300/50 outline-none backdrop-blur-sm text-slate-100"
               placeholder="Your Name"
             />
           </motion.div>
 
           {/* Email */}
           <motion.div variants={itemVariants} className="relative">
-            <div className="absolute left-3 top-3 text-sky-300">
+            <div className="absolute left-3 top-3 text-teal-300">
               <Mail size={20} />
             </div>
             <input
@@ -168,14 +151,14 @@ const ContactForm = () => {
               value={formData.user_email}
               onChange={handleChange}
               required
-              className="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-300/50 focus:border-sky-300/50 outline-none backdrop-blur-sm text-slate-100"
+              className="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-teal-300/20 rounded-lg focus:ring-2 focus:ring-teal-300/50 focus:border-teal-300/50 outline-none backdrop-blur-sm text-slate-100"
               placeholder="Your Email"
             />
           </motion.div>
 
           {/* Message */}
           <motion.div variants={itemVariants} className="relative">
-            <div className="absolute left-3 top-3 text-sky-300">
+            <div className="absolute left-3 top-3 text-teal-300">
               <MessageSquare size={20} />
             </div>
             <textarea
@@ -184,7 +167,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               rows={4}
-              className="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-sky-300/20 rounded-lg focus:ring-2 focus:ring-sky-300/50 focus:border-sky-300/50 outline-none backdrop-blur-sm resize-none text-slate-100"
+              className="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-teal-300/20 rounded-lg focus:ring-2 focus:ring-teal-300/50 focus:border-teal-300/50 outline-none backdrop-blur-sm resize-none text-slate-100"
               placeholder="Your Message"
             />
           </motion.div>
@@ -193,7 +176,7 @@ const ContactForm = () => {
           <motion.div variants={itemVariants} className="flex justify-center">
             <motion.button
               type="submit"
-              className="group relative overflow-hidden px-8 py-3 bg-gradient-to-r from-sky-300 to-cyan-300 text-slate-900 font-medium rounded-lg shadow-lg flex items-center gap-2"
+              className="group relative overflow-hidden px-8 py-3 bg-gradient-to-r from-teal-400 to-cyan-400 text-slate-900 font-medium rounded-lg shadow-lg flex items-center gap-2"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -217,7 +200,7 @@ const ContactForm = () => {
           transition={{ delay: 0.8, duration: 0.5 }}
         >
           <p className="text-gray-400">
-            You can also reach me directly at <span className="text-sky-300 font-medium">itsayushiranjan@gmail.com</span>
+            You can also reach me directly at <span className="text-teal-300 font-medium">itsayushiranjan@gmail.com</span>
           </p>
         </motion.div>
       </motion.div>
