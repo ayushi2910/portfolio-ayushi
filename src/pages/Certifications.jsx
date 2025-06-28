@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ExternalLink, Award, Trophy, Medal } from 'lucide-react';
+import Particles from '../components/Particles';
 
 const Certifications = () => {
   const [certificates, setCertificates] = useState([]);
   const [flippedId, setFlippedId] = useState(null);
+
 
   // Certificate data from your file, converted to teal/cyan theme
   useEffect(() => {
@@ -99,8 +101,8 @@ const Certifications = () => {
 
   return (
     <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.1),transparent_50%)]"></div>
+      {/* Particles Background */}  
+      <Particles />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
