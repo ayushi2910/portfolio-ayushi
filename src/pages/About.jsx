@@ -1,8 +1,10 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { 
   User, 
   Globe, 
   Lightbulb, 
+  Code,
   Heart, 
   Target,
   Github,
@@ -18,6 +20,8 @@ import {
   Brain,
   Trophy
 } from 'lucide-react';
+import Particles from '../components/Particles';
+
 
 const About = () => {
   const aboutCards = [
@@ -25,7 +29,7 @@ const About = () => {
       id: 'about',
       title: 'About Me',
       icon: User,
-      content: "I'm a passionate full-stack developer with 5+ years of experience crafting digital solutions. I love turning complex problems into simple, beautiful, and intuitive designs. My journey in tech started with curiosity and has evolved into a deep passion for creating meaningful user experiences.",
+      content: "I'm a third year Computer Science and Design student, passionate about problem solving, data structures and building new projects that solves real world problem and expanding my technical knowledge along the way.",
       gradient: 'from-teal-400 to-cyan-500'
     },
     {
@@ -34,21 +38,21 @@ const About = () => {
       icon: Globe,
       content: (
         <div className="grid grid-cols-2 gap-3 sm:gap-4">
-          <a href="#" className="flex items-center gap-2 p-2 sm:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 group">
+          <a href="https://github.com/ayushi2910" className="flex items-center gap-2 p-2 sm:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 group">
             <Github className="w-4 h-4 sm:w-5 sm:h-5 text-teal-300 group-hover:rotate-12 transition-transform duration-300" />
             <span className="text-xs sm:text-sm">GitHub</span>
           </a>
-          <a href="#" className="flex items-center gap-2 p-2 sm:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 group">
+          <a href="https://www.linkedin.com/in/ayushi2910" className="flex items-center gap-2 p-2 sm:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 group">
             <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-300 group-hover:rotate-12 transition-transform duration-300" />
             <span className="text-xs sm:text-sm">LinkedIn</span>
           </a>
-          <a href="#" className="flex items-center gap-2 p-2 sm:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 group">
-            <Twitter className="w-4 h-4 sm:w-5 sm:h-5 text-sky-300 group-hover:rotate-12 transition-transform duration-300" />
-            <span className="text-xs sm:text-sm">Twitter</span>
+          <a href="https://www.geeksforgeeks.org/user/itsayushfyg3/#" className="flex items-center gap-2 p-2 sm:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 group">
+            <Code className="w-4 h-4 sm:w-5 sm:h-5 text-sky-300 group-hover:rotate-12 transition-transform duration-300" />
+            <span className="text-xs sm:text-sm">GeeksforGeeks</span>
           </a>
-          <a href="#" className="flex items-center gap-2 p-2 sm:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 group">
+          <a href="https://leetcode.com/u/ayushi2910/" className="flex items-center gap-2 p-2 sm:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 group">
             <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-300 group-hover:rotate-12 transition-transform duration-300" />
-            <span className="text-xs sm:text-sm">Email</span>
+            <span className="text-xs sm:text-sm">LeetCode</span>
           </a>
         </div>
       ),
@@ -62,19 +66,19 @@ const About = () => {
         <div className="space-y-3 sm:space-y-4">
           <div className="flex items-center gap-2 sm:gap-3">
             <Coffee className="w-4 h-4 sm:w-5 sm:h-5 text-amber-300" />
-            <span className="text-xs sm:text-sm">500+ cups of coffee consumed this year</span>
+            <span className="text-xs sm:text-sm">Penning down memories, journaling is my habit.</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Music className="w-4 h-4 sm:w-5 sm:h-5 text-purple-300" />
-            <span className="text-xs sm:text-sm">Code better with lo-fi beats</span>
+            <span className="text-xs sm:text-sm">Building projects with music-YESS.</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Camera className="w-4 h-4 sm:w-5 sm:h-5 text-pink-300" />
-            <span className="text-xs sm:text-sm">Weekend photographer</span>
+            <span className="text-xs sm:text-sm">Enjoy art, design, painting and crafts little too much.</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-green-300" />
-            <span className="text-xs sm:text-sm">Currently reading 3 tech books</span>
+            <span className="text-xs sm:text-sm">Avid book reader, and they are my escape.</span>
           </div>
         </div>
       ),
@@ -86,21 +90,21 @@ const About = () => {
       icon: Heart,
       content: (
         <div className="space-y-3 sm:space-y-4">
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex  sm:gap-3">
             <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300" />
-            <span className="text-xs sm:text-sm">High energy & enthusiastic</span>
+            <span className="text-xs sm:text-sm">New tech? I'm in – Always ready to build and explore.</span>
           </div>
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex  gap-2 sm:gap-3">
             <Smile className="w-4 h-4 sm:w-5 sm:h-5 text-orange-300" />
-            <span className="text-xs sm:text-sm">Positive & collaborative</span>
+            <span className="text-xs sm:text-sm">Netflix? I learn – Either a new skill or a new project.</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-blue-300" />
-            <span className="text-xs sm:text-sm">Analytical problem solver</span>
+            <span className="text-xs sm:text-sm">Tough problems? I fight – I chase the answer till I win.</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-red-300" />
-            <span className="text-xs sm:text-sm">Empathetic team player</span>
+            <span className="text-xs sm:text-sm">Inspiring people – I connect, learn, and grow with them.</span>
           </div>
         </div>
       ),
@@ -112,21 +116,14 @@ const About = () => {
       icon: Target,
       content: (
         <div className="space-y-3 sm:space-y-4">
-          <div className="flex items-center gap-2 sm:gap-3">
-            <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
-            <span className="text-xs sm:text-sm">Master AI/ML technologies</span>
+        
+          <div className="flex items-center gap-4 sm:gap-3">
+            <Target className="w-4 h-4 sm:w-7 sm:h-5 text-red-400" />
+            <span className="text-xs sm:text-sm">Start my tech career with a well-reputed and growth-oriented organization.</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            <Target className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
-            <span className="text-xs sm:text-sm">Launch a successful SaaS product</span>
-          </div>
-          <div className="flex items-center gap-2 sm:gap-3">
-            <User className="w-4 h-4 sm:w-5 sm:h-5 text-teal-400" />
-            <span className="text-xs sm:text-sm">Mentor junior developers</span>
-          </div>
-          <div className="flex items-center gap-2 sm:gap-3">
-            <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
-            <span className="text-xs sm:text-sm">Contribute to open source</span>
+            <Globe className="w-4 h-4 sm:w-7 sm:h-5 text-blue-400" />
+            <span className="text-xs sm:text-sm">Gain real-world experience through impactful internships and hands-on opportunities.</span>
           </div>
         </div>
       ),
@@ -136,6 +133,7 @@ const About = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-10 sm:py-20 px-4 sm:px-6 overflow-x-hidden">
+
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-16">
