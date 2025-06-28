@@ -9,278 +9,212 @@ import {
   ExternalLink,
   Code,
   Database,
-  Globe,
   Smartphone,
   Palette,
-  GitBranch,
-  Server,
-  Layers
+  GitBranch
 } from 'lucide-react';
+import Profile from '../assets/ayushi portfolio image.png';
 import Particles from '../components/Particles';
-import Sidebar from '../components/Sidebar';
 
 const Resume = () => {
   const [resumeModal, setResumeModal] = useState(false);
 
-  // Sample data - replace with your actual information
+  // Updated data to match the image
   const profileData = {
     name: "Ayushi Ranjan",
-    branch: "Computer Science and Design",
+    branch: "Computer Science and Design Student",
     email: "itsayushiranjan@gmail.com",
-    image: "/api/placeholder/150/150", // Circular profile image
+    image: "/api/placeholder/150/150",
     skills: [
-      { name: "C++", icon: Code },
-      { name: "HTML/CSS", icon: Code },
-      { name: "Python", icon: Code },
-      { name: "JavaScript", icon: Code },
-      { name: "React.js", icon: Code },
-      { name: "Express.js", icon: Code },
-      { name: "Node.js", icon: Smartphone },
-      { name: "MongoDB", icon: Database },
-      { name: "MySQL", icon: Database },
-      { name: "UI/UX", icon: Palette },
-      { name: "Github", icon: GitBranch }
+      { name: "C++, Python", icon: Code },
+      { name: "HTML, CSS, JavaScript", icon: Code },
+      { name: "React.js, Node.js, Express.js ", icon: Code },
+      { name: "MongoDB, Supabase", icon:Database },
+      { name: "Data Structures and Algorithms", icon: Code },
+      { name: "Problem Solving", icon: Code },
+      { name: "Computer Networking, Github", icon: GitBranch },
+      { name: "OOPS, DBMS", icon: GitBranch }
     ]
   };
 
   const educationData = [
     {
-      institution: "Madhav Institute of Technology and Science",
-      degree: "B.Tech Computer Science & Design",
-      timeline: "2022 - 2026",
-      score: "8.64 CGPA",
-      type: "cgpa"
+      institution: "Madhav Institute of Technology and Science, Gwalior",
+      degree: "B.Tech in Computer Science and Design",
+      timeline: "Graduating: 2026",
+      score: "Current CGPA: 8.64 (Among highest in branch)",
+      type: "cgpa",
+      semester: "Semester 6"
     },
     {
-      institution: "Shanti Public Higher Secondary School",
-      degree: "12th Grade - Science",
-      timeline: "2021",
-      score: "94.8%",
-      type: "percentage"
+      institution: "Shanti Public Hr. Sec. School, Guna",
+      degree: "Class 12th - CBSE",
+      timeline: "Year: 2021",
+      score: "Percentage: 94.%8",
+      type: "percentage",
+      semester: ""
+    },
+    {
+      institution: "Shanti Public Hr. Sec. School, Guna",
+      degree: "Class 10th - CBSE",
+      timeline: "Year: 2019",
+      score: "Percentage: 93.6%",
+      type: "percentage",
+      semester: ""
     }
   ];
 
   const handleViewResume = () => {
     setResumeModal(true);
-    // In real implementation, this could open a modal or navigate to a full resume view
   };
 
   const handleDownloadResume = () => {
-    // In real implementation, this would trigger PDF download
     const link = document.createElement('a');
-    link.href = '/path-to-your-resume.pdf'; // Replace with actual resume PDF path
+    link.href = '/path-to-your-resume.pdf';
     link.download = 'Ayushi_Ranjan_Resume.pdf';
     link.click();
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Particles Background */}
-      <Particles particleCount={40} />
+    <section className="min-h-screen from-slate-900 via-slate-800 to-slate-900 py-10 sm:py-20 px-4 sm:px-6">
       
-      {/* Sidebar */}
-      <Sidebar />
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.1),transparent_50%)]"></div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
+
+      <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white font-mono mb-4 tracking-tight">
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Resume</span>
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-br from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-3 sm:mb-4 font-mono">
+             My Resume
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-teal-400 to-cyan-400 mx-auto rounded-full"></div>
+
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-teal-200 to-teal-300 mx-auto rounded-full mb-4 sm:mb-6"></div>
         </div>
 
-        {/* 3D Floating Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Left Grid - Profile & Skills */}
-          <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-            {/* 3D Card */}
-            <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 shadow-2xl overflow-hidden h-full">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-400/5 to-cyan-400/5 opacity-5 group-hover:opacity-10 transition-opacity duration-500"></div>
-              
-              {/* Floating Particles */}
-              <div className="absolute -top-2 -right-2 w-20 h-20 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400/20 to-teal-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700 delay-100"></div>
-              
-              {/* Card Content */}
-              <div className="relative z-10">
-                {/* Profile Section */}
-                <div className="text-center mb-8">
-                  {/* Circular Profile Image */}
-                  <div className="relative inline-block mb-6">
-                    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gradient-to-r from-teal-400 to-cyan-400 p-1 bg-gradient-to-r from-teal-400 to-cyan-400 group-hover:rotate-6 transition-transform duration-300">
-                      <img 
-                        src={profileData.image} 
-                        alt="Profile" 
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute -bottom-2 -right-2 p-2 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-full">
-                      <User className="w-6 h-6 text-teal-300 group-hover:rotate-12 transition-transform duration-300" />
-                    </div>
-                  </div>
-                  
-                  {/* Profile Info */}
-                  <h3 className="text-3xl font-bold text-white font-mono mb-2 tracking-tight">
-                    {profileData.name}
-                  </h3>
-                  <p className="text-xl text-teal-300 font-mono mb-2">
-                    {profileData.branch}
-                  </p>
-                  <div className="flex items-center justify-center gap-2 text-slate-300 mb-6">
-                    <Mail className="w-5 h-5 text-teal-400" />
-                    <span className="font-mono">{profileData.email}</span>
-                  </div>
-                </div>
-
-                {/* Skills Section */}
-                <div>
-                  <h4 className="text-2xl font-bold text-white font-mono mb-6 text-center">
-                    Technical Skills
-                  </h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    {profileData.skills.map((skill, index) => {
-                      const IconComponent = skill.icon;
-                      return (
-                        <div
-                          key={index}
-                          className="group/skill relative overflow-hidden"
-                        >
-                          <button className="w-full p-3 bg-gradient-to-br from-slate-700/50 to-slate-800/50 hover:from-teal-400/20 hover:to-cyan-400/20 border border-slate-600/50 hover:border-teal-400/50 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-400/25">
-                            <div className="flex items-center justify-center gap-2">
-                              <IconComponent className="w-4 h-4 text-teal-300 group-hover/skill:rotate-12 transition-transform duration-300" />
-                              <span className="text-sm font-mono text-white group-hover/skill:text-teal-300 transition-colors duration-300">
-                                {skill.name}
-                              </span>
-                            </div>
-                          </button>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          
+          {/* Left Column - Profile */}
+          <div className="md:col-span-1 brelative bg-gradient-to-br from-teal-200/80 to-teal-200/80 backdrop-blur-xl rounded-2xl p-8 border shadow-2xl overflow-hidden h-full   border-gray-200">
+            {/* Profile Section */}
+            <div className="text-center mb-6">
+              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md mx-auto mb-4">
+                <img 
+                  src={Profile} 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              
-              {/* Hover Glow Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-400/0 via-cyan-400/0 to-blue-400/0 group-hover:from-teal-400/5 group-hover:via-cyan-400/5 group-hover:to-blue-400/5 transition-all duration-500"></div>
-            </div>
-            
-            {/* 3D Shadow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-400/10 to-cyan-400/10 rounded-2xl transform translate-x-2 translate-y-2 -z-10 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-300"></div>
-          </div>
-
-          {/* Right Grid - Education & CTA */}
-          <div className="group relative transform-gpu transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-            {/* 3D Card */}
-            <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 shadow-2xl overflow-hidden h-full">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-teal-400/5 opacity-5 group-hover:opacity-10 transition-opacity duration-500"></div>
-              
-              {/* Floating Particles */}
-              <div className="absolute -top-2 -left-2 w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-teal-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-br from-teal-400/20 to-blue-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700 delay-100"></div>
-              
-              {/* Card Content */}
-              <div className="relative z-10 h-full flex flex-col">
-                {/* Education Section */}
-                <div className="flex-1 mb-8">
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-400/20 to-teal-400/20 group-hover:from-cyan-400/30 group-hover:to-teal-400/30 transition-all duration-300">
-                      <GraduationCap className="w-8 h-8 text-cyan-300 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                    </div>
-                    <h3 className="text-3xl font-bold text-white font-mono tracking-tight">
-                      Education
-                    </h3>
-                  </div>
-
-                  <div className="space-y-6">
-                    {educationData.map((edu, index) => (
-                      <div key={index} className="relative">
-                        <div className="bg-gradient-to-br from-slate-700/30 to-slate-800/30 rounded-xl p-6 border border-slate-600/30 hover:border-teal-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-teal-400/10">
-                          <div className="flex items-start justify-between mb-3">
-                            <h4 className="text-xl font-bold text-white font-mono">
-                              {edu.institution}
-                            </h4>
-                            <div className="flex items-center gap-2 text-teal-300">
-                              <Calendar className="w-4 h-4" />
-                              <span className="text-sm font-mono">{edu.timeline}</span>
-                            </div>
-                          </div>
-                          <p className="text-slate-300 font-mono mb-2">{edu.degree}</p>
-                          <div className="flex items-center gap-2">
-                            <Award className="w-4 h-4 text-cyan-400" />
-                            <span className="text-cyan-300 font-mono font-semibold">{edu.score}</span>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* CTA Buttons */}
-                <div className="space-y-4">
-                  <button
-                    onClick={handleViewResume}
-                    className="w-full group/btn relative overflow-hidden bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-white font-mono font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-400/25"
-                  >
-                    <div className="flex items-center justify-center gap-3">
-                      <ExternalLink className="w-5 h-5 group-hover/btn:rotate-12 transition-transform duration-300" />
-                      <span>View Resume Online</span>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500"></div>
-                  </button>
-
-                  <button
-                    onClick={handleDownloadResume}
-                    className="w-full group/btn relative overflow-hidden bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 border-2 border-teal-400/50 hover:border-teal-400 text-white font-mono font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-400/25"
-                  >
-                    <div className="flex items-center justify-center gap-3">
-                      <Download className="w-5 h-5 group-hover/btn:rotate-12 transition-transform duration-300" />
-                      <span>Download Resume</span>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-teal-400/0 via-teal-400/20 to-teal-400/0 translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500"></div>
-                  </button>
-                </div>
-              </div>
-              
-              {/* Hover Glow Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/0 via-teal-400/0 to-blue-400/0 group-hover:from-cyan-400/5 group-hover:via-teal-400/5 group-hover:to-blue-400/5 transition-all duration-500"></div>
-            </div>
-            
-            {/* 3D Shadow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-teal-400/10 rounded-2xl transform translate-x-2 translate-y-2 -z-10 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-300"></div>
-          </div>
-        </div>
-
-        {/* Resume Modal */}
-        {resumeModal && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 max-w-md w-full border border-slate-700">
-              <h3 className="text-2xl font-bold text-white font-mono mb-4">Resume Preview</h3>
-              <p className="text-slate-300 font-mono mb-6">
-                This would open your full resume in a new tab or display it in a modal.
+              <h3 className="text-xl font-bold text-teal-900 mb-1">
+                {profileData.name}
+              </h3>
+              <p className="text-teal-700 text-sm mb-2">
+                {profileData.branch}
               </p>
+              <div className="flex items-center justify-center gap-2 text-teal-700 text-sm">
+                <Mail className="w-4 h-4" />
+                <span>{profileData.email}</span>
+              </div>
+            </div>
+
+            {/* Skills Section */}
+            <div>
+              <h4 className="text-lg font-semibold text-teal-900 mb-4 border-b pb-2">
+                Skills
+              </h4>
+              <div className="space-y-3">
+                {profileData.skills.map((skill, index) => {
+                  const IconComponent = skill.icon;
+                  return (
+                    <div key={index} className="flex items-start gap-2">
+                      <IconComponent className="w-4 h-4 mt-1 text-gray-600 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">{skill.name}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Education */}
+          
+          <div className="md:col-span-2 bg-gray-50 p-6 rounded-2xl border border-gray-200 relative bg-gradient-to-br from-slate-800/80 to-slate-900/80">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-blue-100 rounded-lg">
+                <GraduationCap className="w-5 h-5 text-cyan-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800">
+                Education
+              </h3>
+            </div>
+
+            <div className="space-y-6">
+              {educationData.map((edu, index) => (
+                <div key={index} className="relative pl-6 border-l-2 border-blue-200">
+                  <div className="absolute -left-1.5 top-0 w-3 h-3 bg-cyan-500 rounded-full"></div>
+                  <div className="bg-teal-100 p-4 rounded-lg shadow-sm">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1">
+                      {edu.institution}
+                    </h4>
+                    {edu.degree && (
+                      <p className="text-gray-600 text-sm mb-2">{edu.degree}</p>
+                    )}
+                    {edu.semester && (
+                      <p className="text-gray-600 text-sm mb-2">{edu.semester}</p>
+                    )}
+                    <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Calendar className="w-4 h-4" />
+                        <span>{edu.timeline}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Award className="w-4 h-4" />
+                        <span>{edu.score}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <button
-                onClick={() => setResumeModal(false)}
-                className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-white font-mono font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                onClick={handleViewResume}
+                className="w-full bg-gradient-to-r from-teal-500 to-cyan-400 text-slate-900 px-6 lg:px-4 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-teal-400/30 duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95 text-md lg:text-base group flex items-center justify-center gap-2 transition-colors"
               >
-                Close
+                <ExternalLink className="w-4 h-4" />
+                <span>View Resume Online</span>
+              </button>
+
+              <button
+                onClick={handleDownloadResume}
+                className="w-full bg-gradient-to-r from-slate-700 to-slate-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-slate-600/30  duration-300 backdrop-blur-sm hover:scale-105 active:scale-95  text-md lg:text-base group hover:from-teal-600 hover:to-cyan-500 flex items-center justify-center gap-2 bg-white border border-teal-600 hover:bg-blue-50  transition-colors"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download as PDF</span>
               </button>
             </div>
           </div>
-        )}
+        </div>
       </div>
 
-      {/* Floating Background Elements */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-3/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse delay-500"></div>
-        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-teal-300 rounded-full animate-pulse delay-700"></div>
-      </div>
+      {/* Resume Modal */}
+      {resumeModal && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full border border-gray-200">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Resume Preview</h3>
+            <p className="text-gray-600 mb-6">
+              This would open your full resume in a new tab or display it in a modal.
+            </p>
+            <button
+              onClick={() => setResumeModal(false)}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
