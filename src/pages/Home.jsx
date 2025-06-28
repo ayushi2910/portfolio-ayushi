@@ -3,9 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Particles from '../components/Particles';
-import Sidebar from '../components/Sidebar';
 import Typewriter from '../components/Typewriter';
-import Footer from '../components/Footer';
 import Profile from '../assets/ayushi portfolio image.png';
 
 import { Github, Linkedin, Mail, Code2 } from 'lucide-react';
@@ -14,9 +12,8 @@ const Home = () => {
   const skills = [
     "Frontend Developer",
     "Problem Solver", 
-    "DSA Enthusiast",
+    "DSA Learner ",
     "React Developer",
-    "UI/UX Designer",
     "Tech Explorer",
     "Creative Coder"
   ];
@@ -26,7 +23,7 @@ const Home = () => {
       icon: Linkedin, 
       href: "https://linkedin.com/in/ayushi2910", 
       label: "LinkedIn",
-      color: "hover:bg-blue-600"
+      color: "hover:bg-gray-700"
     },
     { 
       icon: Github, 
@@ -38,13 +35,13 @@ const Home = () => {
       icon: Mail, 
       href: "mailto:itsayushiranjan@gmail.com", 
       label: "Email",
-      color: "hover:bg-red-500"
+      color: "hover:bg-gray-700"
     },
     { 
       icon: Code2, 
       href: "https://leetcode.com/ayushi2910", 
       label: "LeetCode",
-      color: "hover:bg-yellow-500"
+      color: "hover:bg-gray-700"
     }
   ];
 
@@ -98,7 +95,7 @@ const Home = () => {
                 
                 {/* Typewriter Skills */}
                 <div className="text-xl lg:text-2xl text-slate-300 min-h-[3rem] flex items-center justify-center lg:justify-start">
-                  <span className="mr-2 font-mono">I am a </span>
+                  <span className="mr-2 ">I am a </span>
                   <Typewriter 
                     words={skills}
                     speed={100}
@@ -123,7 +120,7 @@ const Home = () => {
                   <span className="w-8 h-1 bg-gradient-to-r from-teal-400 to-cyan-300 mr-3"></span>
                   Who Am I?
                 </h2>
-                <p className="text-slate-300 text-base lg:text-lg leading-relaxed font-mono">
+                <p className="text-slate-300 text-base lg:text-lg leading-relaxed ">
                   I'm a Computer Science and Design student with a strong interest in data structures and modern web development. I enjoy building responsive interfaces and constantly expanding my skills to stay ahead in the ever-evolving tech landscape.
                 </p>
               </div>
@@ -131,7 +128,7 @@ const Home = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
                 <a href="/resume" className="flex-1">
-                  <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-400 text-slate-900 px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-teal-400/30 transition-all duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95 font-mono text-sm lg:text-base group">
+                  <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-400 text-slate-900 px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-teal-400/30 transition-all duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95 text-md lg:text-base group">
                     <span className="flex items-center justify-center">
                       Resume
                     </span>
@@ -139,7 +136,7 @@ const Home = () => {
                 </a>
 
                 <a href="/projects" className="flex-1">
-                  <button className="w-full bg-gradient-to-r from-slate-700 to-slate-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-slate-600/30 transition-all duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95 font-mono text-sm lg:text-base group hover:from-teal-600 hover:to-cyan-500">
+                  <button className="w-full bg-gradient-to-r from-slate-700 to-slate-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-slate-600/30 transition-all duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95  text-md lg:text-base group hover:from-teal-600 hover:to-cyan-500">
                     <span className="flex items-center justify-center">
                       My Work
                     </span>
