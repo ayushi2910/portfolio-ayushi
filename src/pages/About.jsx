@@ -132,12 +132,12 @@ const About = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-10 sm:py-20 px-4 sm:px-6 overflow-x-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-10 sm:py-20 px-4 sm:px-6 overflow-x-hidden mt-9">
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto ">
         {/* Section Header */}
-        <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-5xl font-bold text-white font-mono mb-4 tracking-tight">
+        <div className="text-center mt-10 mb-10 sm:mb-16">
+          <h2 className="text-5xl font-bold text-white  mt-10 mb-4 ">
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Me</span>
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-teal-400 to-cyan-400 mx-auto rounded-full mb-4 sm:mb-6"></div>

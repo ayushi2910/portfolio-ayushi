@@ -71,12 +71,12 @@ const Resume = () => {
   };
 
   return (
-    <section className="min-h-screen from-slate-900 via-slate-800 to-slate-900 py-10 sm:py-20 px-4 sm:px-6">
+    <section className="min-h-screen from-slate-900 via-slate-800 to-slate-900 py-10 sm:py-20 px-4 sm:px-6 mt-10">
       
 
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-10 sm:mb-16">
+        <div className="text-center mb-10 sm:mb-16 mt-10">
           <h2 className="text-5xl font-bold text-white font-mono mb-4 tracking-tight">
             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Resume</span>
           </h2>
@@ -89,7 +89,7 @@ const Resume = () => {
           
           
           {/* Left Column - Profile */}
-          <div className="md:col-span-1 brelative bg-gradient-to-br from-teal-200/80 to-teal-200/80 backdrop-blur-xl rounded-2xl p-8 border shadow-2xl overflow-hidden h-full   border-gray-200">
+          <div className="md:col-span-1 brelative bg-gradient-to-br from-teal-200/80 to-teal-200/80 backdrop-blur-xl rounded-2xl p-8 border shadow-2xl overflow-hidden h-full   border-gray-200 ">
             {/* Profile Section */}
             <div className="text-center mb-6">
               <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md mx-auto mb-4">
