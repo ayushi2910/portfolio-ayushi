@@ -64,15 +64,10 @@ const Resume = () => {
     }
   ];
 
-  const handleViewResume = () => {
-    setResumeModal(true);
-  };
+
 
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/path-to-your-resume.pdf';
-    link.download = 'Ayushi_Ranjan_Resume.pdf';
-    link.click();
+    window.open("https://drive.google.com/uc?export=download&id=1Q5ag8uGJRgb3tdYDLi_7Z4U8NTNFdPQ7", "_blank");
   };
 
   return (
@@ -178,13 +173,14 @@ const Resume = () => {
 
             {/* CTA Buttons */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <button
-                onClick={handleViewResume}
+              <a href="https://drive.google.com/file/d/1Q5ag8uGJRgb3tdYDLi_7Z4U8NTNFdPQ7/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full bg-gradient-to-r from-teal-500 to-cyan-400 text-slate-900 px-6 lg:px-4 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-teal-400/30 duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95 text-md lg:text-base group flex items-center justify-center gap-2 transition-colors"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>View Resume Online</span>
-              </button>
+              </a>
 
               <button
                 onClick={handleDownloadResume}
