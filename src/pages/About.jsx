@@ -137,8 +137,8 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-cyan-300 bg-clip-text text-transparent mb-3 sm:mb-4 font-mono">
-            About Me
+          <h2 className="text-5xl font-bold text-white font-mono mb-4 tracking-tight">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Me</span>
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-teal-400 to-cyan-400 mx-auto rounded-full mb-4 sm:mb-6"></div>
         </div>

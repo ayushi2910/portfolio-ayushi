@@ -181,11 +181,11 @@ const Projects = () => {
                       <h3 className="text-xl font-bold text-white font-mono tracking-tight group-hover:text-teal-300 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      <span className="text-xs font-mono text-teal-400 bg-teal-400/10 px-2 py-1 rounded-full">
+                      <span className="text-xs  text-teal-400 bg-teal-400/10 px-2 py-1 rounded-full">
                         {project.category}
                       </span>
                     </div>
-                    <p className="text-slate-300 text-sm font-mono leading-relaxed">
+                    <p className="text-slate-300 text-sm leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -203,7 +203,7 @@ const Projects = () => {
                     {/* View More Button */}
                     <button
                       onClick={() => handleViewMore(project)}
-                      className="group/view w-full relative overflow-hidden bg-gradient-to-r from-teal-100 to-cyan-100 hover:from-teal-200 hover:to-cyan-200 text-slate-900 font-mono font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-400/25"
+                      className="group/view w-full relative overflow-hidden bg-gradient-to-r from-teal-100 to-cyan-100 hover:from-teal-200 hover:to-cyan-200 text-slate-900  font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-400/25"
                     >
                       <div className="flex items-center justify-center gap-2">
                         <Eye className="w-4 h-4 group-hover/view:rotate-12 transition-transform duration-300" />
@@ -234,7 +234,7 @@ const Projects = () => {
                   <h3 className="text-3xl font-bold text-white font-mono mb-2">
                     {selectedProject.title}
                   </h3>
-                  <span className="text-sm font-mono text-teal-400 bg-teal-400/10 px-3 py-1 rounded-full">
+                  <span className="text-sm  text-teal-400 bg-teal-400/10 px-3 py-1 rounded-full">
                     {selectedProject.category}
                   </span>
                 </div>
@@ -259,15 +259,15 @@ const Projects = () => {
 
                 {/* Full Description */}
                 <div className="mb-6">
-                  <h4 className="text-xl font-bold text-white font-mono mb-4">Project Overview</h4>
-                  <p className="text-slate-300 font-mono leading-relaxed text-sm">
+                  <h4 className="text-xl font-bold text-white  mb-4">Project Overview</h4>
+                  <p className="text-slate-300  leading-relaxed text-sm">
                     {selectedProject.fullDescription}
                   </p>
                 </div>
 
                 {/* Tech Stack */}
                 <div className="mb-6">
-                  <h4 className="text-xl font-bold text-white font-mono mb-4">Technologies Used</h4>
+                  <h4 className="text-xl font-bold text-white  mb-4">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.techStack.map((tech, index) => (
                       <span
@@ -286,7 +286,7 @@ const Projects = () => {
                     href={selectedProject.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 group/btn flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 border border-slate-600 hover:border-teal-400 text-white font-mono font-bold rounded-xl transition-all duration-300"
+                    className="flex-1 group/btn flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 border border-slate-600 hover:border-teal-400 text-white  font-bold rounded-xl transition-all duration-300"
                   >
                     <Github className="w-5 h-5 group-hover/btn:rotate-12 transition-transform duration-300" />
                     <span>View on GitHub</span>
@@ -295,7 +295,7 @@ const Projects = () => {
                     href={selectedProject.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 group/btn flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-white font-mono font-bold rounded-xl transition-all duration-300"
+                    className="flex-1 group/btn flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-400 hover:to-cyan-400 text-white  font-bold rounded-xl transition-all duration-300"
                   >
                     <ExternalLink className="w-5 h-5 group-hover/btn:rotate-12 transition-transform duration-300" />
                     <span>Live Demo</span>

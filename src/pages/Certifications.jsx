@@ -60,7 +60,7 @@ const Certifications = () => {
         organization: "Ministry of Education's Innovation Cell and AICTE",
         skills: ["Machine Learning", "Team Work", "Development", "Innovation", "Problem Solving"],
         description: "Developed an AI-based ship routing solution using real-time weather and agro data.Selected among the top 30 teams from the college for Smart India Hackathon 2024.",
-        type: "Award",
+        type: "",
         link: "https://dcs.mitsgwalior.in/certificates/69",
         icon: Award
       },
@@ -158,7 +158,7 @@ const Certifications = () => {
                               <div className={`p-2 rounded-xl bg-gradient-to-br ${getTypeColor(certificate.type)} transition-all duration-300`}>
                                 <IconComponent className="w-6 h-6 text-teal-300 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
                               </div>
-                              <span className={`text-xs font-mono px-2 py-1 rounded-full bg-gradient-to-r ${getTypeColor(certificate.type)} text-teal-300`}>
+                              <span className={`text-xs  px-2 py-1 rounded-full bg-gradient-to-r ${getTypeColor(certificate.type)} text-teal-300`}>
                                 {certificate.type}
                               </span>
                             </div>
@@ -179,13 +179,13 @@ const Certifications = () => {
                               {certificate.skills.slice(0, 4).map((skill, skillIndex) => (
                                 <span
                                   key={skillIndex}
-                                  className="bg-gradient-to-r from-teal-400/20 to-cyan-400/20 border border-teal-400/30 text-teal-300 text-xs font-mono px-2 py-1 rounded-md hover:from-teal-400/30 hover:to-cyan-400/30 transition-all duration-300"
+                                  className="bg-gradient-to-r from-teal-400/20 to-cyan-400/20 border border-teal-400/30 text-teal-300 text-xs px-2 py-1 rounded-md hover:from-teal-400/30 hover:to-cyan-400/30 transition-all duration-300"
                                 >
                                   {skill}
                                 </span>
                               ))}
                               {certificate.skills.length > 4 && (
-                                <span className="bg-gradient-to-r from-slate-700/50 to-slate-800/50 border border-slate-600/50 text-slate-400 text-xs font-mono px-2 py-1 rounded-md">
+                                <span className="bg-gradient-to-r from-slate-700/50 to-slate-800/50 border border-slate-600/50 text-slate-400 text-xs  px-2 py-1 rounded-md">
                                   +{certificate.skills.length - 4}
                                 </span>
                               )}
@@ -194,7 +194,7 @@ const Certifications = () => {
 
                           {/* Flip Indicator */}
                           <div className="text-center">
-                            <span className="text-teal-400 text-xs font-mono opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                            <span className="text-teal-400 text-xs  opacity-60 group-hover:opacity-100 transition-opacity duration-300">
                               Back
                             </span>
                           </div>
@@ -225,10 +225,10 @@ const Certifications = () => {
                         {/* Back Content */}
                         <div className="relative z-10 flex flex-col justify-between h-full">
                           <div>
-                            <h3 className="text-lg font-bold text-white font-mono mb-3 text-teal-300">
+                            <h3 className="text-lg font-bold text-white font-mono mb-3 ">
                               {certificate.name}
                             </h3>
-                            <p className="text-slate-300 text-sm font-mono leading-relaxed">
+                            <p className="text-slate-300 text-sm leading-relaxed">
                               {certificate.description}
                             </p>
                           </div>
@@ -238,13 +238,13 @@ const Certifications = () => {
                               href={certificate.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="group/link flex items-center gap-2 text-teal-400 hover:text-teal-300 text-sm font-mono font-medium transition-colors duration-300 bg-gradient-to-r from-teal-400/10 to-cyan-400/10 hover:from-teal-400/20 hover:to-cyan-400/20 px-3 py-2 rounded-lg border border-teal-400/30 hover:border-teal-400/50"
+                              className="group/link flex items-center gap-2 text-teal-400 hover:text-teal-300 text-sm font-medium transition-colors duration-300 bg-gradient-to-r from-teal-400/10 to-cyan-400/10 hover:from-teal-400/20 hover:to-cyan-400/20 px-3 py-2 rounded-lg border border-teal-400/30 hover:border-teal-400/50"
                               onClick={(e) => e.stopPropagation()}
                             >
                               View Certificate
                               <ExternalLink className="w-4 h-4 group-hover/link:rotate-12 transition-transform duration-300" />
                             </a>
-                            <span className="text-cyan-400 text-xs font-mono opacity-60">
+                            <span className="text-cyan-400 text-xs  opacity-60">
                               Front
                             </span>
                           </div>
