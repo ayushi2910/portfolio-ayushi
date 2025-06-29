@@ -6,6 +6,7 @@ import Particles from '../components/Particles';
 import Typewriter from '../components/Typewriter';
 import Profile from '../assets/ayushi portfolio image.png';
 
+
 import { Github, Linkedin, Mail, Code2 } from 'lucide-react';
 
 const Home = () => {
@@ -66,9 +67,9 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* Profile Picture with Glow */}
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-center lg:justify-start mt-10">
                 <div className="relative">
-                  <div className="w-80 h-80 sm:w-70 sm:h-70 lg:w-70 lg:h-70 rounded-full overflow-hidden border-4 border-teal-400 relative">
+                  <div className="w-70 h-70 sm:w-60 sm:h-60 lg:w-60 lg:h-60 rounded-full overflow-hidden border-4 border-white relative">
                     {/* Glowing Animation */}
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-400 to-cyan-300 animate-pulse opacity-20"></div>
                     <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-teal-400 to-cyan-300 opacity-20 animate-ping"></div>
@@ -127,21 +128,21 @@ const Home = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
-                <a href="/resume" className="flex-1">
+                <Link to="/resume" className="flex-1">
                   <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-400 text-slate-900 px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-teal-400/30 transition-all duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95 text-md lg:text-base group">
                     <span className="flex items-center justify-center">
                       Resume
                     </span>
                   </button>
-                </a>
+                </Link>
 
-                <a href="/projects" className="flex-1">
+                <Link to="/projects" className="flex-1">
                   <button className="w-full bg-gradient-to-r from-slate-700 to-slate-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-bold shadow-lg hover:shadow-slate-600/30 transition-all duration-300 backdrop-blur-sm border border-teal-400/20 hover:scale-105 active:scale-95  text-md lg:text-base group hover:from-teal-600 hover:to-cyan-500">
                     <span className="flex items-center justify-center">
                       My Work
                     </span>
                   </button>
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
