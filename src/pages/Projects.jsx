@@ -14,7 +14,7 @@ import {
 import Particles from '../components/Particles';
 //images
 import Sahayak from '../assets/sahayak.jpeg';
-import ArtCanvas from '../assets/artcanvas.jpeg';
+import FinEase from '../assets/artcanvas.jpeg';
 import SortingVisualizer from '../assets/sortingalgo.jpeg';
 import SoftSell from '../assets/softsell.jpeg';
 import MedicineRec from '../assets/medicine.jpeg';
@@ -44,14 +44,14 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "ArtCanvas",
-      image: ArtCanvas,
-      description: "Digital drawing platform with layers, export options, and othe different customized art tools.",
-      fullDescription: "ArtCanvas is a clean, responsive digital drawing platform built using Next.js, TypeScript, and Tailwind CSS. It features a flexible brush and eraser system, shape drawing tools, and layer management for organizing complex artwork. Users can draw freely, customize tool settings, and export their work as high-quality PNG images. The interface is intuitive, designed for both beginners and experienced digital artists, with support for modern UX practices and real-time canvas updates. The platform is fully deployed on Vercel.",
-      techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-      githubUrl: "https://github.com/ayushi2910/ArtCanvas-digital-drawing-platform",
-      liveUrl: "https://art-canvas-digital-drawing-platform.vercel.app/",
-      category: "Creative Tool"
+      title: "FinEase",
+      image: FinEase,
+      description: "AI-powered personal finance platform for smart expense tracking, budgeting, and financial insights.",
+      fullDescription: "FinEase is a smart, responsive full-stack finance management platform, it offers users advanced tools to manage their finances effectively, including multi-account management, transaction filtering, real-time dashboards, and monthly budgeting features. With AI-powered receipt scanning and automated insights, users get personalized financial reports on their mails. The app integrates Inngest for background jobs and Arcjet for bot protection and rate limiting. Designed with modern UI/UX principles, FinEase ensures a seamless user experience. Fully deployed on Vercel.",
+      techStack: ["Next.js", "React.js" "JavaScript", "Tailwind CSS", "Supabase", "Prisma", "Inngest", "Arcjet", "Shadcn UI"],
+      githubUrl: "https://github.com/ayushi2910/Fin-Ease",
+      liveUrl: "https://finease-ayushiranjan.vercel.app/",
+      category: "Finance Platform"
     },
     {
       id: 3,
