@@ -48,7 +48,7 @@ const Projects = () => {
       image: FinEase,
       description: "AI-powered personal finance platform for smart expense tracking, budgeting, and financial insights.",
       fullDescription: "FinEase is a smart, responsive full-stack finance management platform, it offers users advanced tools to manage their finances effectively, including multi-account management, transaction filtering, real-time dashboards, and monthly budgeting features. With AI-powered receipt scanning and automated insights, users get personalized financial reports on their mails. The app integrates Inngest for background jobs and Arcjet for bot protection and rate limiting. Designed with modern UI/UX principles, FinEase ensures a seamless user experience. Fully deployed on Vercel.",
-      techStack: ["Next.js", "React.js" "JavaScript", "Tailwind CSS", "Supabase", "Prisma", "Inngest", "Arcjet", "Shadcn UI"],
+      techStack: ["Next.js", "React.js", "JavaScript", "Tailwind CSS", "Supabase", "Prisma", "Inngest", "Arcjet", "Shadcn UI"],
       githubUrl: "https://github.com/ayushi2910/Fin-Ease",
       liveUrl: "https://finease-ayushiranjan.vercel.app/",
       category: "Finance Platform"
