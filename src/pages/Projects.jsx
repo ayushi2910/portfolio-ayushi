@@ -14,7 +14,7 @@ import {
 import Particles from '../components/Particles';
 //images
 import Sahayak from '../assets/sahayak.jpeg';
-import FinEase from '../assets/artcanvas.jpeg';
+import FinEase from '../assets/FinEase.jpeg';
 import SortingVisualizer from '../assets/sortingalgo.jpeg';
 import SoftSell from '../assets/softsell.jpeg';
 import MedicineRec from '../assets/medicine.jpeg';
