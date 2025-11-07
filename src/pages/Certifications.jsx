@@ -104,7 +104,7 @@ const Certifications = () => {
       {/* Particles Background */}  
       <Particles />
       
-      <div className="max-w-xl mx-auto relative z-10 mt-9">
+      <div className="max-w-6xl mx-auto relative z-10 mt-9">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white  mb-4 tracking-tight">
@@ -113,9 +113,8 @@ const Certifications = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-teal-400 to-cyan-400 mx-auto rounded-full mb-6"></div>
         </div>
 
-        {/* 3D Floating Certificates Grid - Wrapped in a scrollable container */}
-        <div className="overflow-y-auto max-h-[calc(100vh-200px)] pb-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-2">
+        <div className="">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {certificates.map((certificate, index) => {
               const IconComponent = certificate.icon;
               return (
